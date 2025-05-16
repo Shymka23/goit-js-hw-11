@@ -30,6 +30,10 @@ body {
   border-radius: 4px;
   width: 300px;
 }
+.form input:focus {
+  outline: 2px solid #ff6b08;
+  outline-offset: 2px;
+}
 
 .form button {
   padding: 10px 20px;
@@ -43,6 +47,11 @@ body {
 
 .form button:hover {
   background-color: #ff8c00;
+}
+
+.form button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
 }
 
 .gallery {
@@ -91,6 +100,7 @@ body {
   border-radius: 50%;
   margin: 20px auto;
   animation: rotation 1s linear infinite;
+  will-change: transform;
 }
 
 @keyframes rotation {
@@ -101,4 +111,20 @@ body {
     transform: rotate(360deg);
   }
 }
-
+@media (max-width: 480px) {
+  .form {
+    flex-direction: column;
+  }
+  .form input {
+    width: 100%;
+  }
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.error-message {
+  color: #ff0000;
+  text-align: center;
+  padding: 20px;
+  display: none;
+}
