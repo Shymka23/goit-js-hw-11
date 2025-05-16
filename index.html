@@ -2,28 +2,35 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/goit-js-hw-11/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/styles-DEcit7RE.css">
+    <title>Image Search</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
+    />
+    <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-frHSA4Lh.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-DumFYO8Z.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-DH-LA2ts.css">
   </head>
   <body>
-    <header class="header"></header>
-    <div class="container">
-      <nav class="nav">
-        <ul class="nav-list">
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-act}" href="./1-timer.html"
-              >Timer</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link {=$highlight-curr}" href="./2-snackbar.html"
-              >Snackbar</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <header class="header">
+      <form class="form">
+        <label>
+          <input
+            type="text"
+            name="search-text"
+            placeholder="Search images..."
+            required
+          />
+        </label>
+        <button type="submit">Search</button>
+      </form>
+    </header>
+
+    <main class="main">
+      <div class="loader"></div>
+      <ul class="gallery"></ul>
+    </main>
   </body>
 </html>
